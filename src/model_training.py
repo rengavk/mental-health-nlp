@@ -219,7 +219,7 @@ class PrivacyPreservingNLP:
         # Final privacy budget
         if self.use_dp and self.privacy_engine:
             final_epsilon = self.privacy_engine.get_epsilon(self.delta)
-            print(f"\n🔒 Final Privacy Budget: ε={final_epsilon:.2f}, δ={self.delta}")
+            print(f"\n Final Privacy Budget: ε={final_epsilon:.2f}, δ={self.delta}")
     
     def generate_report(self, save_dir):
         """Generate evaluation report and visualizations"""
@@ -244,7 +244,7 @@ class PrivacyPreservingNLP:
         plt.xlabel('Predicted Label')
         plt.tight_layout()
         plt.savefig(os.path.join(save_dir, 'confusion_matrix.png'), dpi=300)
-        print(f"✅ Confusion matrix saved")
+        print(f" Confusion matrix saved")
         
         # ROC Curves (One-vs-Rest)
         plt.figure(figsize=(10, 8))
@@ -266,12 +266,12 @@ class PrivacyPreservingNLP:
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
         plt.savefig(os.path.join(save_dir, 'roc_curves.png'), dpi=300)
-        print(f"✅ ROC curves saved")
+        print(f" ROC curves saved")
         
         # Save model
         model_path = os.path.join(save_dir, 'crisis_detector.pth')
         torch.save(self.model.state_dict(), model_path)
-        print(f"✅ Model saved to {model_path}")
+        print(f" Model saved to {model_path}")
         
         print("\n" + "="*60)
         print("Report Generation Complete!")
@@ -308,7 +308,7 @@ def main():
     # Generate report
     pipeline.generate_report(models_dir)
     
-    print("\n✅ Pipeline complete!")
+    print("\n Pipeline complete!")
 
 if __name__ == "__main__":
     main()
