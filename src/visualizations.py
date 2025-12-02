@@ -45,7 +45,6 @@ class EmbeddingVisualizer:
         
         with torch.no_grad():
             outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
-            # Use CLS token embedding
             embedding = outputs.last_hidden_state[:, 0, :].cpu().numpy()
         
         return embedding[0]
@@ -96,7 +95,7 @@ class EmbeddingVisualizer:
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ t-SNE plot saved to {save_path}")
+        print(f" t-SNE plot saved to {save_path}")
     
     def plot_umap(self, embeddings, labels, save_path):
         """Create UMAP visualization"""
@@ -128,7 +127,7 @@ class EmbeddingVisualizer:
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ UMAP plot saved to {save_path}")
+        print(f" UMAP plot saved to {save_path}")
     
     def extract_keywords(self, texts, top_n=20):
         """Extract top keywords from texts"""
@@ -166,7 +165,7 @@ class EmbeddingVisualizer:
         plt.tight_layout()
         save_path = os.path.join(save_dir, 'keyword_analysis.png')
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Keyword analysis saved to {save_path}")
+        print(f" Keyword analysis saved to {save_path}")
     
     def create_wordclouds(self, df, save_dir):
         """Create word clouds for each category"""
@@ -196,7 +195,7 @@ class EmbeddingVisualizer:
         plt.tight_layout()
         save_path = os.path.join(save_dir, 'wordclouds.png')
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Word clouds saved to {save_path}")
+        print(f" Word clouds saved to {save_path}")
 
 def main():
     print("="*60)
@@ -239,7 +238,7 @@ def main():
     # Save embeddings
     embeddings_path = os.path.join(models_dir, 'embeddings.npy')
     np.save(embeddings_path, embeddings)
-    print(f"\n✅ Embeddings saved to {embeddings_path}")
+    print(f"\n Embeddings saved to {embeddings_path}")
     
     print("\n" + "="*60)
     print("Visualization Complete!")
@@ -249,7 +248,7 @@ def main():
     print("  - UMAP embedding plot")
     print("  - Keyword analysis")
     print("  - Word clouds")
-    print("\n🔒 Privacy Note: Only embeddings are stored, not raw text!")
+    print("\n Privacy Note: Only embeddings are stored, not raw text!")
 
 if __name__ == "__main__":
     main()
