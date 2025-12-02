@@ -23,54 +23,32 @@ A privacy-preserving NLP system that detects mental health crisis signals using 
 - **Privacy:** Opacus (Differential Privacy)
 - **Visualization:** t-SNE, UMAP, keyword analysis
 
-## 🛠️ Deliverables
+##  Methodology
 
-✅ **Code**
-- `src/data_generator.py` - Synthetic data generation
-- `src/model_training.py` - DP-NLP pipeline
-- `src/visualizations.py` - Embedding & keyword analysis
-
-✅ **Documentation**
-- Comprehensive README with ethical guidelines
-- Safety Policy (11 sections, 300+ lines)
-- Privacy protection protocols
-- Crisis response procedures
-
-✅ **Safety Mechanisms**
-- 3-tier alert system (Green/Yellow/Red)
-- Human oversight requirements
-- Emergency resource integration
-- Fairness auditing framework
-
-## 🔬 Methodology
-
-### Step 1: Problem Framing ✅
+### Step 1: Problem Framing
 - Identified privacy risks in mental health NLP
 - Defined ethical AI principles
 - Established KPIs (Precision, Recall, Privacy Budget)
 
-### Step 2: Data Setup ✅
+### Step 2: Data Setup
 - Generated 3,000 synthetic samples
 - Created realistic stress level scenarios
 - Ensured balanced class distribution
 
-### Step 3: NLP Pipeline ✅ (Code Ready)
+### Step 3: NLP Pipeline 
 - DistilBERT sentence embeddings
 - Crisis classifier with DP-SGD
 - Privacy engine integration
 - Embedding-only storage
 
-### Step 4: Evaluation ✅ (Code Ready)
+### Step 4: Evaluation
 - ROC curves (One-vs-Rest)
 - Confusion matrix
 - t-SNE/UMAP visualizations
 - Keyword cluster analysis
 
-### Step 5: Documentation ✅
-- Safety policy document
-- Ethical guidelines
-- Privacy protections
-- Crisis response protocols
+### step 5: Documentation
+
 
 ## 📁 Project Structure
 
@@ -96,29 +74,7 @@ mental-health-nlp/
 └── .gitignore
 ```
 
-## 🚀 How to Run
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Generate Data (✅ Complete)
-```bash
-python src/data_generator.py
-```
-
-### 3. Train Model (Requires GPU recommended)
-```bash
-python src/model_training.py
-```
-
-### 4. Generate Visualizations
-```bash
-python src/visualizations.py
-```
-
-## 🔒 Privacy Guarantees
+## Privacy Guarantees
 
 ### Differential Privacy
 - **Training:** DP-SGD with ε = 3.0
@@ -132,7 +88,7 @@ python src/visualizations.py
 - **Encryption:** AES-256 (rest), TLS 1.3 (transit)
 - **Compliance:** GDPR, HIPAA, CCPA ready
 
-## 📈 Expected Performance
+## Expected Performance
 
 Based on similar architectures:
 - **Accuracy:** 85-90% (with DP)
@@ -142,7 +98,7 @@ Based on similar architectures:
 
 *Note: Actual performance depends on training completion*
 
-## ⚠️ Ethical Considerations
+## Ethical Considerations
 
 ### Critical Requirements
 1. **Human Oversight:** All crisis alerts require professional review
@@ -157,7 +113,7 @@ Based on similar architectures:
 - **Context-Limited:** May miss cultural/contextual nuances
 - **False Positives:** System may over-alert (by design for safety)
 
-## 🎓 Skills Demonstrated
+## Skills Demonstrated
 
 - **NLP:** BERT, DistilBERT, Transformers
 - **Privacy:** Differential Privacy, DP-SGD, Opacus
@@ -167,55 +123,6 @@ Based on similar architectures:
 - **Documentation:** Technical writing, policy creation
 - **Python:** Advanced OOP, data processing
 
-## 🏆 Project Status
-
-**STATUS:** Code Complete, Ready for Training
-
-✅ **Completed:**
-- [x] Problem framing and ethical guidelines
-- [x] Synthetic data generation (3,000 samples)
-- [x] NLP pipeline implementation
-- [x] Privacy mechanisms (DP-SGD)
-- [x] Visualization scripts
-- [x] Safety policy documentation
-- [x] README and ethical guidelines
-
-⏳ **Pending:**
-- [ ] Model training (requires GPU, ~30-60 min)
-- [ ] Generate visualizations
-- [ ] Performance evaluation
-- [ ] Push to GitHub
-
-## 📝 Next Steps
-
-1. **Train Model:**
-   ```bash
-   python src/model_training.py
-   ```
-
-2. **Generate Visualizations:**
-   ```bash
-   python src/visualizations.py
-   ```
-
-3. **Create GitHub Repository:**
-   - Name: `mental-health-crisis-nlp`
-   - Description: "Privacy-preserving crisis detection with differential privacy"
-
-4. **Update Portfolio:**
-   - Link to GitHub repository
-   - Add project description
-   - Include safety disclaimer
-
-## 🌟 Unique Selling Points
-
-1. **Privacy-First Design:** Differential privacy from the ground up
-2. **No Raw Text Storage:** Only embeddings retained
-3. **Ethical Framework:** Comprehensive safety policy
-4. **Harm Reduction Focus:** Designed to minimize false negatives
-5. **Professional Integration:** Built for human oversight
-6. **Open Source:** Transparent and auditable
-
 ## 📚 References
 
 - **Differential Privacy:** Dwork & Roth (2014)
@@ -223,10 +130,3 @@ Based on similar architectures:
 - **Mental Health NLP:** CLPsych Workshop
 - **AI Ethics:** Partnership on AI Guidelines
 - **Privacy Engineering:** NIST Privacy Framework
-
----
-
-**Created:** November 20, 2025
-**Author:** Renganayaki Venkatakrishnan
-**Purpose:** Data Science Portfolio Project #2
-**Status:** Code Complete, Training Pending
